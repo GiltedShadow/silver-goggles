@@ -28,3 +28,17 @@
 
 #TODO
 brainstorm for project, SRS, project plan, use cases
+
+### 3/1/24
+
+#### Agenda 
+* Brainstorm for
+    1. Project Plan
+    2. SRS
+    3. Use Cases
+
+#### Notes
+* Filled out Project Plan, started SRS
+
+#TODO
+Use Cases, finish project plan, finish SRS, WBS in project
