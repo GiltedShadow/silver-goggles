@@ -8,6 +8,11 @@
 This will be my first full lead role, and I am excited to make a difference in at least my Team. My big goal currently is to reach DevOps and having expereince in running a team and delivering based on a set schedule is a great step toward that goal. 
 
 ---
+
+## Addtl Repositories
+#### Java appplication build and SQL init/ database dump -- [legendary-spork](https://github.com/thomashailey/legendary-spork)
+
+---
 ## Tools
 
 #### JDK-17 
