@@ -34,7 +34,7 @@ All the software is available is at [lab.devry](https://lab.devry.edu/)
 ### Lab Steps
 ---
 
-### Step 1: Create a Sopftware Design
+### Step 1: Create a Software Design
 ---
 Review the requirements in your SRS. These describe the objectives of your design and construction work. Your first task is to create a design or set of designs that will enable the implementation of these requirements through the activity of programming. As you work through these activities, actively look for opportunities to apply design patterns. You will be expected to implement at least two in your final construction.
 
