@@ -1,0 +1,68 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS CEIS400_GroupC_MaintSys;
+
+-- Use the database
+USE CEIS400_GroupC_MaintSys;
+
+-- Create the User Authentication and Access Control Table
+CREATE TABLE IF NOT EXISTS User_Authoization (
+    UserID INT PRIMARY KEY,
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Role ENUM('Admin', 'Maintenance', 'Technician', 'Warehouse', 'Management') NOT NULL,
+    Endorsement VARCHAR(255) NOT NULL
+);
+
+-- Create the Equipment Table
+CREATE TABLE IF NOT EXISTS Equipment (
+    EquipmentIDChar VARCHAR(10) NOT NULL,
+	EquipmentIDNum INT NOT NULL,
+    EquipmentName VARCHAR(255) NOT NULL,
+    Description TEXT,
+    Status ENUM('Checked out', 'Available') NOT NULL,
+    Location VARCHAR(255),
+	PRIMARY KEY (EquipmentIDChar, EquipmentIDNum)
+);
+
+-- Create the EquipmentCheckout Table
+CREATE TABLE IF NOT EXISTS Equipment_Checkout (
+    CheckoutID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    EquipmentIDChar VARCHAR(10),
+	EquipmentIDNum INT,
+    CheckoutDate DATE,
+    ReturnDate DATE,
+    Status ENUM('Checked out', 'Returned') NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User_Authoization(UserID),
+    FOREIGN KEY (EquipmentIDChar, EquipmentIDNum) REFERENCES Equipment(EquipmentIDChar, EquipmentIDNum)
+);
+
+-- Create the Inventory Table
+CREATE TABLE IF NOT EXISTS Inventory (
+    ItemIDChar VARCHAR(10) NOT NULL,
+	ItemIDNum INT NOT NULL,
+    ItemName VARCHAR(255) NOT NULL,
+    Description TEXT,
+    Quantity INT NOT NULL,
+    Location VARCHAR(255),
+	PRIMARY KEY (ItemIDChar, ItemIDNum)
+);
+
+-- Create the MaintenanceActivities Table
+CREATE TABLE IF NOT EXISTS Maintenance_Activities (
+    ActivityID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    ActivityDate DATE,
+    Description TEXT,
+    FOREIGN KEY (UserID) REFERENCES User_Authoization(UserID)
+);
+
+-- Create the Reports Table
+CREATE TABLE IF NOT EXISTS Reports (
+    ReportID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    ReportDate DATE,
+    ReportType VARCHAR(255),
+    Data BLOB,
+    FOREIGN KEY (UserID) REFERENCES User_Authoization(UserID)
+);
