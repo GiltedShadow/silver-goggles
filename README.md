@@ -7,6 +7,10 @@
 ##### Team Lead
 This will be my first full lead role, and I am excited to make a difference in at least my Team. My big goal currently is to reach DevOps and having expereince in running a team and delivering based on a set schedule is a great step toward that goal. 
 
+#### Hailey Thomas
+##### Lead Programmer: Java
+This is my first role as a lead programmer, and I learned a great deal over the course of this project. Currently, my goal is to gain a well-rounded skillset that will benefit myself and any company I work for in the software development field. Working with my team while completing this application has been a great experience, and I look forward to working in a team setting again in the future.
+
 ---
 
 ## Addtl Repositories
